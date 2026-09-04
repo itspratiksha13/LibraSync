@@ -104,36 +104,48 @@ LibraSync/
 ├── statement.md
 └── .gitignore
 ```
-
 ## Requirements
 
 - JDK 17+
 - Maven 3.8+
+- Internet connection for the first Maven build to download the required dependencies
+
+No separate database installation is required. LibraSync uses SQLite, and the database is created automatically when the application runs.
 
 ---
 
 ## Run
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/itspratiksha13/LibraSync.git
 cd LibraSync
 ```
 
-Build the project:
+### 2. Build the project and install dependencies
+
+Maven automatically downloads the required project dependencies during the build.
 
 ```bash
 mvn clean package
 ```
 
-Run the application:
+### 3. Run the application
 
 ```bash
 java -jar target/librasync-1.0.jar
 ```
 
-The SQLite database is created automatically in data/librasync.db when the application is run.
+### 4. Database configuration
+
+No manual database configuration is required. The SQLite database is automatically created at:
+
+```text
+data/librasync.db
+```
+
+when the application is run.
 
 ---
 
